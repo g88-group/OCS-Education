@@ -19,6 +19,9 @@ const Class = () => {
         setAddClass(!addClass);
         const action = { type: t.SAVE_CLASS_BTN, payload: false }
         dispatch(action);
+        setValue("")
+        setValue1("")
+        setValue2("")
     }
     const classProperty = (index) => {
         if (classDetails < 0) {
@@ -66,7 +69,7 @@ const Class = () => {
                             addClass ? <div className={`row m-0 classModal justify-content-center align-items-center ${addClass ? "top-0" : ""}`}>
                                 <div className="col-md-6 col-10">
                                     <div className=" class_modal_content py-3">
-                                        <h4 className="text-center m-0">Sinf qo'shish</h4>
+                                        <h4 className="text-center m-0">Sinf qo&apos;shish</h4>
                                         <div className="p-5">
                                             <input type="text" className="form-control mb-3" placeholder="Sinf" value={value} onChange={event => setValue(event.target.value)} />
                                             <input type="text" className="form-control mb-3" placeholder="Sinf rahbari" value={value1} onChange={event => setValue1(event.target.value)} />
@@ -76,13 +79,13 @@ const Class = () => {
                                             <button className="btn btn-primary" onClick={addclass}>Orqaga qaytish</button>
                                             {
                                                 classSaveBtn ? <button className="btn btn-primary ms-2" onClick={saveClass}>Saqlash</button> :
-                                                    <button className="btn btn-primary ms-2">Qo'shish</button>
+                                                    <button className="btn btn-primary ms-2">Qo&apos;shish</button>
                                             }
                                         </div>
                                     </div>
                                 </div>
                             </div> :
-                                <button className="btn btn-primary" type="button" onClick={addclass}>Yangi sinf qo'shish</button>
+                                <button className="btn btn-primary" type="button" onClick={addclass}>Yangi sinf qo&apos;shish</button>
                         }
 
                     </div>
@@ -94,7 +97,7 @@ const Class = () => {
                                     <th>#ID</th>
                                     <th>Sinf</th>
                                     <th>Sinf rahbari</th>
-                                    <th>O'quvchilar soni</th>
+                                    <th>O&apos;quvchilar soni</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -112,7 +115,7 @@ const Class = () => {
                                                 </button>
                                                 <div className={`position-absolute item_box_child  ${classDetails == i ? "d-block" : ""}`}>
                                                     <button className="d-block w-100 btn shadow-none" onClick={() => edit(i)}>Taxrirlash</button>
-                                                    <button className="d-block w-100 btn shadow-none" onClick={() => deleteClass(i)}>O'chirish</button>
+                                                    <button className="d-block w-100 btn shadow-none" onClick={() => deleteClass(i)}>O&apos;chirish</button>
                                                 </div>
                                             </div>
                                         </td>

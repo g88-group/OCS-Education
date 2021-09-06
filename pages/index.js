@@ -68,13 +68,13 @@ export default function Home() {
       <HomeWrapper>
         <div className="home">
           <div className="home_header p-3 mb-5">
-            <h4 className="m-0 title">O'quv yillari</h4>
+            <h4 className="m-0 title">O&apos;quv yillari</h4>
           </div>
           {
             addYear ?
               <div className="row m-0 home_year_add d-flex align-items-center mb-4" onClose={AddYear}>
                 <div className="col-sm-4 bg-white p-2 shadow rounded-3 text-end">
-                  <h4 className="text-center my-2">O'quv yili qo'shish</h4>
+                  <h4 className="text-center my-2">O&apos;quv yili qo&apos;shish</h4>
                   <form className="p-3">
                     <input type="text" className="form-control mb-4" value={value}
                       placeholder="O'quv yili qo'shish" onChange={inputvalue} required />
@@ -86,7 +86,7 @@ export default function Home() {
                         Saqlash
                       </button> :
                         <button className="btn btn-primary" type="button" onClick={addyear}>
-                          Qo'shish
+                          Qo&apos;shish
                         </button>
                     }
                   </form>
@@ -94,7 +94,7 @@ export default function Home() {
               </div> :
               <div className="mb-4">
                 <Button variant="contained" color="primary" onClick={AddYear}>
-                  O'quv yili qo'shish
+                  O&apos;quv yili qo&apos;shish
                 </Button>
               </div>
           }
@@ -103,7 +103,7 @@ export default function Home() {
               <thead>
                 <tr>
                   <th>#ID</th>
-                  <th>O'quv yillari</th>
+                  <th>O&apos;quv yillari</th>
                   <th></th>
                 </tr>
               </thead>
@@ -119,7 +119,7 @@ export default function Home() {
                         </button>
                         <div className={`position-absolute item_box_child ${showYear == i ? "d-block" : ""} `}>
                           <button className="d-block w-100 btn shadow-none" onClick={() => edit(i)}>Taxrirlash</button>
-                          <button className="d-block w-100 btn hadow-none" onClick={() => deleteYear(i)}>O'chirish</button>
+                          <button className="d-block w-100 btn hadow-none" onClick={() => deleteYear(i)}>O&apos;chirish</button>
                         </div>
                       </div>
                     </td>
