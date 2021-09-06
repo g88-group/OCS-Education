@@ -109,7 +109,7 @@ export default function Home() {
               </thead>
               <tbody>
                 {
-                  data.map((v, i) => <tr key={i}>
+                  data.map((v, i) => <tr className="align-middle" key={i}>
                     <td scope="row">{i}</td>
                     <td>{v.title}</td>
                     <td className="text-center" >
